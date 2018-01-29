@@ -49,7 +49,7 @@ def mutate(child):
 pop = np.random.randint(2, size=(POP_SIZE, DNA_SIZE))   # initialize the pop DNA
 
 plt.ion()       # something about plotting
-x = np.linspace(*X_BOUND, 200)
+x = np.linspace(*(X_BOUND+[200])) #x = np.linspace(*X_BOUND, 200) 
 plt.plot(x, F(x))
 
 for _ in range(N_GENERATIONS):
